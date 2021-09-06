@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 
 // [react-firebaseui] 라이브러리 설정 부분
 const uiConfig = {
-  signInSuccessUrl: "/playground", // 로그인 후 이동할 페이지 설정
+  signInSuccessUrl: "/main", // 로그인 후 이동할 페이지 설정
   signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID], // 로그인에 이용하고자 하는 소셜 로그인 제공업체 설정
 };
 
@@ -29,11 +29,19 @@ const Title = styled.div`
   font-weight: 500;
 `;
 
+const Footer = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+`;
+
 const LoginPage = () => {
   return (
     <Wrapper>
       <Title>This is a login page</Title>
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+      <Footer>
+        &copy; {new Date().getFullYear()} Chungsik Firebase Practice
+      </Footer>
     </Wrapper>
   );
 };

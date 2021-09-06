@@ -19,7 +19,7 @@ const Title = styled.div`
   font-weight: 500;
 `;
 
-const MainPage = () => {
+const WritePage = () => {
   return (
     <Wrapper>
       <Title>This is a main page.</Title>
@@ -28,4 +28,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default WritePage;
