@@ -6,8 +6,13 @@ import styled from "@emotion/styled";
 
 // [react-firebaseui] 라이브러리 설정 부분
 const uiConfig = {
-  signInSuccessUrl: "/main", // 로그인 후 이동할 페이지 설정
-  signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID], // 로그인에 이용하고자 하는 소셜 로그인 제공업체 설정
+  signInFlow: "popup", // 팝업 방식으로 로그인 설정
+  signInSuccessUrl: "/write", // 로그인 후 이동할 페이지 설정
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.GithubAuthProvider.PROVIDER_ID,
+  ], // 로그인에 이용하고자 하는 소셜 로그인 제공업체 설정
 };
 
 const Wrapper = styled.div`
